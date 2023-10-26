@@ -1,0 +1,16 @@
+import SectionTitle from "./SectionTitle";
+import SkillsCard from "./SkillsCard";
+import { skills } from "../data";
+const Skills = () => {
+  return (
+    <section className="align-element py-16" id="skills">
+      <SectionTitle text="Tech Skills" />
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {skills.map((item) => {
+          return <SkillsCard key={item.id} {...item} />;
+        })}
+      </div>
+    </section>
+  );
+};
+export default Skills;
